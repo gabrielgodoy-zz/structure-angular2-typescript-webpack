@@ -12,9 +12,9 @@
   * [Tests](https://angular.io/docs/ts/latest/guide/testing.html) 
   * [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)
 * [Karma](https://karma-runner.github.io/) 
-* [Protractor](https://angular.github.io/protractor/) 
 * [Jasmine](https://github.com/jasmine/jasmine) 
 * [Istanbul](https://github.com/gotwarlost/istanbul) 
+* [Protractor](https://angular.github.io/protractor/) 
 * [TypeScript](http://www.typescriptlang.org/) 
 * [@types](https://www.npmjs.com/~types)
 * [TsLint](http://palantir.github.io/tslint/)
@@ -22,15 +22,9 @@
 * [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
 * [Webpack 2](http://webpack.github.io/)
 
+> More Features
 
-* Ready to go build system using Webpack for working with TypeScript.
-* Ahead of Time (AoT) compile for rapid page loads of your production builds.
-* Tree shaking to automatically remove unused code from your production bundle.
 * [Webpack DLLs](https://robertknight.github.io/posts/webpack-dll-plugins/) dramatically speed your development builds.
-* Testing Angular 2 code with Jasmine and Karma.
-* Coverage with Istanbul and Karma
-* End-to-end Angular 2 code using Protractor.
-* Type manager with @types
 * Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
 * Material Design with [angular/material2](https://github.com/angular/material2)
 * Angular 4 support via changing package.json and any future Angular versions
@@ -75,8 +69,7 @@ go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http
 * [License](#license)
 
 
-## File Structure
-We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
+## File Structure with the component approach
 ```
 angular2-typescript-webpack/
  ├──config/                        * configuration folder
@@ -121,7 +114,7 @@ angular2-typescript-webpack/
 ## Running the app
 Run `npm run server` to start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. 
 
-The port will be displayed to you as `http://0.0.0.0:3000` (or if you prefer IPv6, if you're using `express` server, then it's `http://[::1]:3000/`).
+The port will be displayed to you as `http://0.0.0.0:3000`
 
 ### server
 ```bash
@@ -217,11 +210,6 @@ We have good experience using these editors:
 * [Webstorm 10](https://www.jetbrains.com/webstorm/download/)
 * [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
 * [Sublime Text](http://www.sublimetext.com/3) with [Typescript-Sublime-Plugin](https://github.com/Microsoft/Typescript-Sublime-plugin#installation)
-
-### Visual Studio Code + Debugger for Chrome
-> Install [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) and see docs for instructions to launch Chrome 
-
-The included `.vscode` automatically connects to the webpack development server on port `3000`.
 
 # Types
 > When you include a module that doesn't include Type Definitions inside of the module you can include external Type Definitions with @types
