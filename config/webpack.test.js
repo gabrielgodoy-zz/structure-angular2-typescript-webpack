@@ -1,5 +1,3 @@
-
-
 const helpers = require('./helpers');
 
 /**
@@ -20,7 +18,7 @@ const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
  *
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
-module.exports = function (options) {
+module.exports = function(options) {
   return {
 
     /**
@@ -138,9 +136,9 @@ module.exports = function (options) {
          * See: https://github.com/webpack/raw-loader
          */
         {
-            test: /\.scss$/,
-            loader: ['raw-loader', 'sass-loader'],
-            exclude: [helpers.root('src/index.html')]
+          test: /\.scss$/,
+          loader: ['raw-loader', 'sass-loader'],
+          exclude: [helpers.root('src/index.html')]
         },
 
         /**
@@ -257,4 +255,4 @@ module.exports = function (options) {
     }
 
   };
-}
+};

@@ -1,10 +1,9 @@
-
 function HtmlElementsPlugin(locations) {
   this.locations = locations;
 }
 
 HtmlElementsPlugin.prototype.apply = function(compiler) {
-  var self = this;
+  const self = this;
   compiler.plugin('compilation', function(compilation) {
     compilation.options.htmlElements = compilation.options.htmlElements || {};
 
@@ -18,7 +17,6 @@ HtmlElementsPlugin.prototype.apply = function(compiler) {
           compilation.options.htmlElements[loc] = getHtmlElementString(locations[loc], publicPath);
         });
       }
-
 
       callback(null, htmlPluginData);
     });
@@ -48,23 +46,25 @@ function createTag(tagName, attrMap, publicPath) {
   }
 
   const attributes = Object.getOwnPropertyNames(attrMap)
-    .filter(function(name) { return name[0] !== '='; } )
-    .map(function(name) {
-      var value = attrMap[name];
+                           .filter(function(name) {
+                             return name[0] !== '=';
+                           })
+                           .map(function(name) {
+                             let value = attrMap[name];
 
-      if (publicPath) {
-        // check if we have explicit instruction, use it if so (e.g: =herf: false)
-        // if no instruction, use public path if it's href attribute.
-        const usePublicPath = attrMap.hasOwnProperty('=' + name) ? !!attrMap['=' + name] : name === 'href';
+                             if (publicPath) {
+                               // check if we have explicit instruction, use it if so (e.g: =herf: false)
+                               // if no instruction, use public path if it's href attribute.
+                               const usePublicPath = attrMap.hasOwnProperty('=' + name) ? !!attrMap['=' + name] : name === 'href';
 
-        if (usePublicPath) {
-          // remove a starting trailing slash if the value has one so we wont have //
-          value = publicPath + (value[0] === '/' ? value.substr(1) : value);
-        }
-      }
+                               if (usePublicPath) {
+                                 // remove a starting trailing slash if the value has one so we wont have //
+                                 value = publicPath + (value[0] === '/' ? value.substr(1) : value);
+                               }
+                             }
 
-      return `${name}="${value}"`;
-    });
+                             return `${name}="${value}"`;
+                           });
 
   const closingTag = tagName === 'script' ? '</script>' : '';
 
@@ -93,16 +93,18 @@ function createTag(tagName, attrMap, publicPath) {
  */
 function getHtmlElementString(dataSource, publicPath) {
   return Object.getOwnPropertyNames(dataSource)
-    .map(function(name) {
-      if (Array.isArray(dataSource[name])) {
-        return dataSource[name].map(function(attrs) { return createTag(name, attrs, publicPath); } );
-      } else {
-        return [ createTag(name, dataSource[name], publicPath) ];
-      }
-    })
-    .reduce(function(arr, curr) {
-      return arr.concat(curr);
-    }, [])
-    .join('\n\t');
+               .map(function(name) {
+                 if (Array.isArray(dataSource[name])) {
+                   return dataSource[name].map(function(attrs) {
+                     return createTag(name, attrs, publicPath);
+                   });
+                 } else {
+                   return [createTag(name, dataSource[name], publicPath)];
+                 }
+               })
+               .reduce(function(arr, curr) {
+                 return arr.concat(curr);
+               }, [])
+               .join('\n\t');
 }
 module.exports = HtmlElementsPlugin;

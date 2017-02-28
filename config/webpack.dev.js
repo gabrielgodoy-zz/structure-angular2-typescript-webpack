@@ -1,5 +1,3 @@
-
-
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const webpackMergeDll = webpackMerge.strategy({plugins: 'replace'});
@@ -252,4 +250,4 @@ module.exports = function (options) {
     }
 
   });
-}
+};

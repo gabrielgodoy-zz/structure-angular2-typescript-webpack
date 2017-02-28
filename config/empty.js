@@ -1,6 +1,7 @@
 module.exports = {
   NgProbeToken: {},
-  HmrState: function() {},
+  HmrState: function() {
+  },
   _createConditionalRootRenderer: function(rootRenderer, extraTokens, coreTokens) {
     return rootRenderer;
   },
