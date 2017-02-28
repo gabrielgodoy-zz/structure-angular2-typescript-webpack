@@ -22,8 +22,6 @@ import { XLargeDirective } from './x-large';
   templateUrl: './home.component.pug'
 })
 export class HomeComponent implements OnInit {
-  public a = true;
-
   // Set our default values
   public localState = { value: '' };
 
