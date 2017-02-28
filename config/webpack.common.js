@@ -358,7 +358,6 @@ module.exports = function(options) {
         tsConfig: helpers.root('tsconfig.webpack.json'),
         resourceOverride: helpers.root('config/resource-override.js')
       })
-
     ],
 
     /*

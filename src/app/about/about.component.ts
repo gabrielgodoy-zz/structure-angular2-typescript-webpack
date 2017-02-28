@@ -11,19 +11,16 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './about.component.pug',
 })
 export class AboutComponent implements OnInit {
-
   public localState: any;
 
   constructor(public route: ActivatedRoute) {
   }
 
   public ngOnInit() {
-    this.route
-      .data
-      .subscribe((data: any) => {
-        // your resolved data from route
-        this.localState = data.yourData;
-      });
+    this.route.data.subscribe((data: any) => {
+      // your resolved data from route
+      this.localState = data.yourData;
+    });
 
     console.log('hello `About` component');
     // static data that is bundled
@@ -38,14 +35,11 @@ export class AboutComponent implements OnInit {
     // you would do this if you don't want the mock-data bundled
     // remember that 'es6-promise-loader' is a promise
     setTimeout(() => {
-
       System.import('../../assets/mock-data/mock-data.json')
         .then((json) => {
           console.log('async mockData', json);
           this.localState = json;
         });
-
     });
   }
-
 }

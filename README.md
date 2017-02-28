@@ -2,6 +2,8 @@
 
 > Features 
 
+## Framework
+
 * [Angular 2](https://angular.io) 
 * [Angular 4](https://github.com/angular/angular/tree/4.0.0-beta.0)
   * [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html)
@@ -11,22 +13,34 @@
   * [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter)
   * [Tests](https://angular.io/docs/ts/latest/guide/testing.html) 
   * [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)
+* Angular 4 support via changing package.json and any future Angular versions
+  
+## Testing
+
 * [Karma](https://karma-runner.github.io/) 
 * [Jasmine](https://github.com/jasmine/jasmine) 
 * [Istanbul](https://github.com/gotwarlost/istanbul) 
 * [Protractor](https://angular.github.io/protractor/) 
+
+## Type checking and Code Standards
+
 * [TypeScript](http://www.typescriptlang.org/) 
 * [@types](https://www.npmjs.com/~types)
-* [TsLint](http://palantir.github.io/tslint/)
-* [Codelyzer](https://github.com/mgechev/codelyzer) 
-* [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
+* [TSLint](http://palantir.github.io/tslint/) Typescript linter
+* [Codelyzer](https://github.com/mgechev/codelyzer) Linting for Angular Projects 
+
+## Module Bundler
+
 * [Webpack 2](http://webpack.github.io/)
+  * [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
   * [Webpack DLLs](https://robertknight.github.io/posts/webpack-dll-plugins/) dramatically speed your development builds.
   * Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
-* Angular 4 support via changing package.json and any future Angular versions
+
 
 ### Quick start
+
 **Make sure you have Node version >= 5.0 and NPM >= 3**
+
 > Clone/Download the repo then edit `app.component.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
 
 ```bash

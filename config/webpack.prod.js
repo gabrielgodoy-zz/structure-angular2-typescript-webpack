@@ -324,6 +324,5 @@ module.exports = function(env) {
       clearImmediate: false,
       setImmediate: false
     }
-
   });
 };
