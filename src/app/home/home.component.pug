@@ -1,0 +1,11 @@
+div
+  h1.sample-content(x-large='') Your Content Here
+  div
+    h4 Local State
+    form((ngsubmit)='submitState(localState.value)', autocomplete='off')
+      input([value]='localState.value',
+            (input)='localState.value = $event.target.value',
+            placeholder='Local State to App State', autofocus='')
+      button Submit Value
+
+    pre this.localState = {{ localState | json }}

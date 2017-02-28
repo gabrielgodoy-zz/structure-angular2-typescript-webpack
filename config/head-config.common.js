@@ -27,7 +27,12 @@ module.exports = {
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/icon/apple-icon-180x180.png' },
 
     /** <link> tags for android web app icons **/
-    { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/assets/icon/android-icon-192x192.png' },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '192x192',
+      href: '/assets/icon/android-icon-192x192.png'
+    },
 
     /** <link> tags for favicons **/
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/icon/favicon-32x32.png' },
@@ -39,7 +44,11 @@ module.exports = {
   ],
   meta: [
     { name: 'msapplication-TileColor', content: '#00bcd4' },
-    { name: 'msapplication-TileImage', content: '/assets/icon/ms-icon-144x144.png', '=content': true },
+    {
+      name: 'msapplication-TileImage',
+      content: '/assets/icon/ms-icon-144x144.png',
+      '=content': true
+    },
     { name: 'theme-color', content: '#00bcd4' }
   ]
 };

@@ -1,0 +1,30 @@
+nav
+  a([routerLink]="['./']",
+    routerLinkActive='active',
+    [routerLinkActiveOptions]='{exact: true}') Index
+
+  a([routerLink]="['./home']",
+    routerLinkActive='active',
+    [routerLinkActiveOptions]='{exact: true}') Home
+
+  a([routerLink]="['./detail']",
+    routerLinkActive='active',
+    [routerLinkActiveOptions]='{exact: true}') Detail
+
+  a([routerLink]="['./barrel']",
+    routerLinkActive='active',
+    [routerLinkActiveOptions]='{exact: true}') Barrel
+
+  a([routerLink]="['./about']",
+    routerLinkActive='active',
+    [routerLinkActiveOptions]='{exact: true}') About
+
+main
+  router-outlet
+
+pre.app-state this.appState.state = {{ appState.state | json }}
+
+footer
+  div
+    a([href]='url')
+      img([src]='angularclassLogo', width='25%')

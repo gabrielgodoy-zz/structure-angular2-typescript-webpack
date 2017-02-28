@@ -21,12 +21,8 @@
 * [Codelyzer](https://github.com/mgechev/codelyzer) 
 * [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
 * [Webpack 2](http://webpack.github.io/)
-
-> More Features
-
-* [Webpack DLLs](https://robertknight.github.io/posts/webpack-dll-plugins/) dramatically speed your development builds.
-* Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
-* Material Design with [angular/material2](https://github.com/angular/material2)
+  * [Webpack DLLs](https://robertknight.github.io/posts/webpack-dll-plugins/) dramatically speed your development builds.
+  * Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
 * Angular 4 support via changing package.json and any future Angular versions
 
 ### Quick start
@@ -95,7 +91,6 @@ angular2-typescript-webpack/
  │   │
  │   └──assets/                    * static assets are served here
  │       ├──icon/                  * our list of icons from www.favicon-generator.org
- │       ├──service-worker.js      * ignore this. Web App service worker that's not complete yet
  │       ├──robots.txt             * for search engines to crawl your website
  │       └──humans.txt             * for humans to know who the developers are
  │
@@ -108,7 +103,6 @@ angular2-typescript-webpack/
  └──webpack.config.js              * webpack main configuration file
 
 ```
-
 # Getting Started
 
 ## Running the app
@@ -266,23 +260,14 @@ import * as _ from 'lodash';
 * Why is my service, aka provider, is not injecting parameter correctly?
   * Please use `@Injectable()` for your service for typescript to correctly attach the metadata (this is a TypeScript problem)
 
-* How do I run protractor with node 0.12.x?
-  * please check out this repo to use the old version of protractor [#146](https://github.com/AngularClass/angular2-webpack-starter/pull/146/files)
-
 * Where do I write my tests?
   * You can write your tests next to your component files. See [`/src/app/home/home.component.spec.ts`](/src/app/home/home.component.spec.ts)
-
-* How do I start the app when I get `EACCES` and `EADDRINUSE` errors?
-  * The `EADDRINUSE` error means the port `3000` is currently being used and `EACCES` is lack of permission for webpack to build files to `./dist/`
 
 * How to use `sass` for css?
  *  * `loaders: ['raw-loader','sass-loader']` and `@Component({ styleUrls: ['./filename.scss'] })` see Wiki page [How to include SCSS in components](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-to-include-SCSS-in-components), or issue [#136](https://github.com/AngularClass/angular2-webpack-starter/issues/136) for more information.
 
 * How do I test a Service?
  * See issue [#130](https://github.com/AngularClass/angular2-webpack-starter/issues/130#issuecomment-158872648)
-
-* How do I add `vscode-chrome-debug` support?
- * The VS Code chrome debug extension support can be done via `launch.json` see issue [#144](https://github.com/AngularClass/angular2-webpack-starter/issues/144#issuecomment-164063790)
 
 * What are the naming conventions for Angular 2?
  * please see issue [#185](https://github.com/AngularClass/angular2-webpack-starter/issues/185) and PR [196](https://github.com/AngularClass/angular2-webpack-starter/pull/196)
@@ -296,11 +281,5 @@ import * as _ from 'lodash';
 * How do I turn on Hot Module Replacement
  * Run `npm run server:dev:hmr`
 
-* `RangeError: Maximum call stack size exceeded`
- * This is a problem with minifying Angular 2 and it's recent JIT templates. If you set `mangle` to `false` then you should be good.
-
 * Why is the size of my app larger in development?
  * We are using inline source-maps and hot module replacement which will increase the bundle size.
-
-* If you're looking to add Angular 2 Material Design
- * check out the [material2](https://github.com/AngularClass/angular2-webpack-starter/tree/material2) branch
